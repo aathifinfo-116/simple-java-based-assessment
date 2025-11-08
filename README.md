@@ -87,3 +87,31 @@ The project follows the Model-View-Controller (MVC) architecture:
 
 * Unit tests are written using JUnit 5 and mockito to ensure the API’s correctness.
 * The tests cover all edge cases (valid name, invalid name, empty name, etc.), ensuring the application behaves as expected under different conditions.
+
+### Meaningful Naming Conventions
+* All Classes, methods, and variables use meaningful names that describe their purpose. For example, variables like name and method names like getGreetingForFirstHalfOfAlphabet() are intuitive and self-explanatory.
+* We avoid abbreviating names unnecessarily and use camelCase for variables and PascalCase for classes, which makes the code more readable and understandable to new developers.
+
+### Custom Response Objects
+* A custom response object (CommonResponse) is used to return a standardized response. This object includes the HTTP status code and the data being returned. This approach ensures consistent responses across the API.
+
+### Simplicity
+* The code is kept simple and readable. Avoiding unnecessary complexity ensures that future developers can easily understand and work with the codebase. Each function, class, and variable is designed to perform one specific task, making it easy to follow and maintain.
+
+
+## Improvements for Better Structured Application
+
+### Use Lombok: 
+* Lombok reduces boilerplate code (e.g., getters, setters, toString(), etc.) by using annotations like @Data, @Getter, @Setter, and @Slf4j. This makes the code more concise and readable.
+
+### Use Slf4j Logging
+* Implementing logging using Slf4j helps track and debug issues in the application. Using @Slf4j provides a simple way to log messages at different levels (info, debug, error).
+
+### Custom Exception Handling
+* By using @ControllerAdvice and creating custom exceptions, we can handle errors consistently across the application, making it easier to debug and maintain.
+
+### Use Design Patterns
+* Applying design patterns such as Singleton and Builder ensures the application’s architecture is clean, scalable, and maintainable.
+
+### Use SonarLint
+* Integrating SonarLint into the development environment helps detect bugs and code quality issues early on, ensuring higher-quality code.
